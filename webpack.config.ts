@@ -1,5 +1,6 @@
 import path from 'path';
 import { Configuration } from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const config: Configuration = {
   mode: 'development',
@@ -25,7 +26,14 @@ const config: Configuration = {
         exclude: /node_modules/
       }
     ]
-  }
+  },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Hybrid Framework Example',
+      template: path.resolve(__dirname, 'src', 'index.html')
+    })
+  ]
 };
 
 export default config;
