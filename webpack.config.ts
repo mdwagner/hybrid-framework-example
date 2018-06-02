@@ -33,7 +33,11 @@ const config: Configuration = {
       title: 'Hybrid Framework Example',
       template: path.resolve(__dirname, 'src', 'index.html')
     })
-  ]
+  ],
+
+  devServer: {
+    open: true
+  }
 };
 
 export default config;
