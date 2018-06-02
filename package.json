@@ -6,5 +6,23 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "mdwagner",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "^6.0.3",
+    "@angular/compiler": "^6.0.3",
+    "@angular/core": "^6.0.3",
+    "@angular/platform-browser": "^6.0.3",
+    "@angular/platform-browser-dynamic": "^6.0.3",
+    "@angular/router": "^6.0.3",
+    "@angular/upgrade": "^6.0.3",
+    "@uirouter/angular-hybrid": "^6.0.0",
+    "@uirouter/angularjs": "^1.0.18",
+    "@uirouter/react-hybrid": "^0.3.0",
+    "angular": "^1.7.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "rxjs": "^6.2.0",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {}
 }
