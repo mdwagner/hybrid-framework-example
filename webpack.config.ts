@@ -4,6 +4,8 @@ import { Configuration } from 'webpack';
 const config: Configuration = {
   mode: 'development',
 
+  devtool: 'cheap-eval-source-map',
+
   entry: path.resolve(__dirname, 'src', 'index.ts'),
 
   output: {

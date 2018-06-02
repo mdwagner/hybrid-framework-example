@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Example showing AngularJS, Angular, and React using UI-Router",
   "scripts": {
+    "start": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack-serve",
     "build": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack"
   },
   "author": "mdwagner",
