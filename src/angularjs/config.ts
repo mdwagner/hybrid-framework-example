@@ -1,5 +1,6 @@
 import { StateProvider, Ng1StateDeclaration } from '@uirouter/angularjs';
 import { ILocationProvider } from 'angular';
+import Button from '../react/Button';
 
 export default class Config {
   constructor(
@@ -7,7 +8,7 @@ export default class Config {
   ) {}
 
   run() {
-    const states: Ng1StateDeclaration[] = [
+    const states: Ng1StateDeclaration[] | any[] = [
       {
         name: 'index',
         url: '/',
@@ -16,6 +17,7 @@ export default class Config {
             Index
             <a ui-sref="index.home">Home</a>
             <a ui-sref="index.home.about">About</a>
+            <a ui-sref="index.home.button">React Button</a>
           </div>
           <div ui-view></div>
         `
@@ -32,6 +34,11 @@ export default class Config {
         name: 'index.home.about',
         url: '/about',
         template: `<div>About</div>`
+      },
+      {
+        name: 'index.home.button',
+        url: '/button',
+        component: Button
       }
     ];
 

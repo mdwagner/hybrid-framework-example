@@ -1,9 +1,10 @@
 import angular from 'angular';
-import UIRouter from '@uirouter/angularjs';
+import { UI_ROUTER_REACT_HYBRID } from '@uirouter/react-hybrid';
 import { Configuration } from './config';
 
 export default angular.module('app',
   [
-    UIRouter
+    'ui.router',
+    UI_ROUTER_REACT_HYBRID
   ])
   .config(Configuration);
