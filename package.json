@@ -1,7 +1,7 @@
 {
   "name": "hybrid-framework-example",
   "version": "0.0.1",
-  "description": "Example showing AngularJS, Angular, and React using UI-Router",
+  "description": "Example attempting AngularJS, Angular, and React using UI-Router",
   "scripts": {
     "prestart": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\"",
     "start": "webpack-dev-server",
