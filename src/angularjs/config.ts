@@ -1,6 +1,10 @@
-import { StateProvider, Ng1StateDeclaration } from '@uirouter/angularjs';
+import { Ng1StateDeclaration, StateProvider } from '@uirouter/angularjs';
+import { NgHybridStateDeclaration } from '@uirouter/angular-hybrid';
+import { ReactStateDeclaration } from '@uirouter/react';
 import { ILocationProvider } from 'angular';
-import Button from '../react/Button';
+// import Button from '../react/Button';
+
+type StateDeclaration = Ng1StateDeclaration | ReactStateDeclaration | NgHybridStateDeclaration;
 
 export default class Config {
   constructor(
@@ -8,7 +12,7 @@ export default class Config {
   ) {}
 
   run() {
-    const states: Ng1StateDeclaration[] | any[] = [
+    const states: StateDeclaration[] = [
       {
         name: 'index',
         url: '/',
@@ -18,6 +22,7 @@ export default class Config {
             <a ui-sref="index.home">Home</a>
             <a ui-sref="index.home.about">About</a>
             <a ui-sref="index.home.button">React Button</a>
+            <a ui-sref="index.home.h1">Ng2 H1</a>
           </div>
           <div ui-view></div>
         `
@@ -35,14 +40,14 @@ export default class Config {
         url: '/about',
         template: `<div>About</div>`
       },
-      {
-        name: 'index.home.button',
-        url: '/button',
-        component: Button
-      }
+      // {
+      //   name: 'index.home.button',
+      //   url: '/button',
+      //   component: Button
+      // }
     ];
 
-    states.forEach(state => this.$stateProvider.state(state));
+    states.forEach(state => this.$stateProvider.state(state as Ng1StateDeclaration));
   }
 }
 
