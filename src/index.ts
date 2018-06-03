@@ -1,5 +1,5 @@
 import angular from 'angular';
+import AppModule from './angularjs';
 
-Object.assign(window, {
-  angular
-});
+const rootElement = document.getElementById('root');
+angular.bootstrap(rootElement!, [AppModule.name], {strictDi: true});

@@ -31,12 +31,14 @@ const config: Configuration = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Hybrid Framework Example',
-      template: path.resolve(__dirname, 'src', 'index.html')
+      template: path.resolve(__dirname, 'src', 'index.html'),
+      favicon: path.resolve(__dirname, 'src', 'favicon.ico')
     })
   ],
 
   devServer: {
-    open: true
+    open: true,
+    historyApiFallback: true
   }
 };
 
